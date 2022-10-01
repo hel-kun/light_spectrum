@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="saikyo.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="saikyo.js"></script>
+        <title>光のスペクトルの不確かさを求めます</title>
+    </head>
+    <body>
+        <h1>光のスペクトルの不確かさを求めます!!</h1>
+        <h3>
+            基礎科学実験A(以下、謁見)で不確かさを求めるのはめんどくさい!!
+            <br/>
+            ということで、ここでは謁見の光のスペクトルの分野の不確かさを求めてくれるぜ!!
+            
+            
+            <br/>
+
+            <select style="height:50px" id="selbox" onchange="change();">
+                <option value="0">--None--</option>
+                <option value="1">Na発行時の回折角から格子定数Nの不確かさを求めたい!!</option>
+                <option value="2">波長とその不確かさを求めたい!!</option>
+            </select>
+
+        </h3>
+
+        <div id="input1" style="display:none;">
+            <form>
+                <h4>
+                    回折角：
+                    <input type="number" name="do1" id="do1" min="0" max="180"/>度
+                    <input type="number" name="fun1" id="fun1" step="0.1" min="0" max="60"/>分
+                    <br/>
+                    格子定数：
+                    <input type="number" name="koushi1" id="koushi1" step="0.1" min="599.0" max="601.0"/> mm<sup>-1</sup>
+                    <br/>
+                    波の種類：
+                    <form id="lambda1">
+                        <input type="radio" id="d1" name="lambda"/>D1 <input type="radio"  id="d2" name="lambda"/>D2
+                    </form>
+                </h4>
+
+                <button id="button1">計算する</button>
+
+                <h3>
+                    sin &theta;：
+                    <output type="text" id="result1-0"></output>
+                    <br/>
+                    格子定数の不確かさ：
+                    <output type="text" id="result1-1"></output>[mm<sup>-1</sup>]
+                </h3>
+            </form>
+        </div>
+
+        <div id="input2" style="display:none;">
+            <h4>
+                回折角：
+                <input type="number" name="do2" id="do2" min="0" max="180">度
+                <input type="number" name="fun2" id="fun2" step="0.1" min="0" max="60"/>分
+                <br/>
+                次数：
+                <input type="number" name="zisu" id="zisu" min="0" max="5"/>次
+                <br/>
+                格子定数の平均：
+                <input type="number" name="koushiava" id="koushiava" step="0.1"/> mm<sup>-1</sup>
+                <br/>
+                格子定数の不確かさ：
+                <input name="koushi2" id="koushi2"/> mm<sup>-1</sup>
+            </h4>
+
+            <button id="button2">計算する</button>
+
+            <h3>
+                sin &theta;：
+                <output type="text" id="result2-0"></output>
+                <br/>
+                波長：
+                <output type="text" id="result2-1"></output>[nm]
+                <br/>
+                波長の不確かさ：
+                <output type="text" id="result2-2"></output>[nm]
+            </h3>
+        </div>
+
+        <video preload src="d-tou_bomb.mp4" id="d-tou_bomb" style="width:500px" poster="d-tou.jpg"> 
+            <h4>D棟を爆破する素質がありません。</h4>
+        </video>
+
+        <h4>
+            <small>&copy; 2022 へるくん</small>
+        </h4>
+    </body>
+</html>
