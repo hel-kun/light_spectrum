@@ -35,3 +35,9 @@ button:hover {
 .ichigyou select{
     display: inline-block;
 }
+
+@media only screen and (max-width: 480px){
+    html{
+      size: 50％;
+  }
+}
