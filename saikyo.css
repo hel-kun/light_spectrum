@@ -38,6 +38,6 @@ button:hover {
 
 @media only screen and (max-width: 480px){
     html{
-      size: 50％;
+      font-size: 50％;
   }
 }
