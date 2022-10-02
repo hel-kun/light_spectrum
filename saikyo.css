@@ -2,14 +2,14 @@ html {
   font-size: 50%;
 }
 video {
-  width:250px;
+  width:25%;
 }
 @media screen and (min-width: 768px) {
   html {
     font-size: 75%;
   }
   video {
-    width:375px;
+    width:37.5%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -17,7 +17,7 @@ video {
     font-size: 100%;
   }
   video {
-    width:500px;
+    width:50%;
   }
 }
 
