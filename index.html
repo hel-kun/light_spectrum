@@ -20,7 +20,7 @@
 
             <select id="selbox" onchange="change();">
                 <option value="0">--None--</option>
-                <option value="1">Na発行時の回折角から格子定数Nの不確かさを求めたい!!</option>
+                <option value="1">Na発行時の回折角から格子定数dの逆数Nの不確かさを求めたい!!</option>
                 <option value="2">波長とその不確かさを求めたい!!</option>
             </select>
 
@@ -33,7 +33,7 @@
                     <input type="number" name="do1" id="do1" min="0" max="180"/>度
                     <input type="number" name="fun1" id="fun1" step="0.1" min="0" max="60"/>分
                     <br/>
-                    格子定数：
+                    格子定数dの逆数N：
                     <input type="number" name="koushi1" id="koushi1" step="0.1" min="599.0" max="601.0"/> mm<sup>-1</sup>
                     <br/>
                     波の種類：
@@ -48,7 +48,7 @@
                     sin &theta;：
                     <output type="text" id="result1-0"></output>
                     <br/>
-                    格子定数の不確かさ：
+                    Nの不確かさ：
                     <output type="text" id="result1-1"></output>[mm<sup>-1</sup>]
                 </h3>
             </form>
@@ -63,10 +63,10 @@
                 次数：
                 <input type="number" name="zisu" id="zisu" min="0" max="5"/>次
                 <br/>
-                格子定数の平均：
+                格子定数の逆数Nの平均：
                 <input type="number" name="koushiava" id="koushiava" step="0.1"/> mm<sup>-1</sup>
                 <br/>
-                格子定数の不確かさ：
+                Nの不確かさ：
                 <input name="koushi2" id="koushi2"/> mm<sup>-1</sup>
             </h4>
 
